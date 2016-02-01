@@ -1,8 +1,9 @@
 package edit
 
 import (
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/cfgReader"
 	"image"
+
+	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/cfgReader"
 )
 
 // backの(xx, yy)にfrontを貼り付け

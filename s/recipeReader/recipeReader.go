@@ -3,9 +3,10 @@ package recipeReader
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
 	"io/ioutil"
 	"path"
+
+	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
 )
 
 type RecipeMain struct {

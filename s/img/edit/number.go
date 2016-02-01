@@ -3,10 +3,11 @@ package edit
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/load"
 	"image"
 	"io/ioutil"
 	"strconv"
+
+	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/load"
 )
 
 type Number struct {

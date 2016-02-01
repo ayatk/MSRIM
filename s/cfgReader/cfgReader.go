@@ -3,9 +3,10 @@ package cfgReader
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
 	"image"
 	"io/ioutil"
+
+	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
 )
 
 type Config2 struct {
