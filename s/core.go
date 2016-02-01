@@ -16,8 +16,8 @@ import (
 var waitGroup sync.WaitGroup //平行処理用
 
 //ロードされたコンフィグと背景画像
-var configs map[string]cfgReader.Config = make(map[string]cfgReader.Config)
-var layerImgs map[string]image.Image = make(map[string]image.Image)
+var configs = make(map[string]cfgReader.Config)
+var layerImgs = make(map[string]image.Image)
 
 func main() {
 	edit.InitNumber()
