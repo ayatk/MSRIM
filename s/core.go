@@ -13,6 +13,8 @@ import (
 	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/recipeReader"
 )
 
+const version = "0.3.0"
+
 var waitGroup sync.WaitGroup //平行処理用
 
 //ロードされたコンフィグと背景画像
