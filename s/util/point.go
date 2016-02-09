@@ -38,7 +38,7 @@ func IArrToPoints(i [][]int) []image.Point {
 	return p
 }
 
-func UiToPoint(i []uint) (p image.Point) {
+func UIToPoint(i []uint) (p image.Point) {
 	if len(i) != 2 {
 		fmt.Println("failed to convert []int to image.Point")
 	} else {
@@ -47,7 +47,7 @@ func UiToPoint(i []uint) (p image.Point) {
 	return
 }
 
-func UiToPoints(i []uint) []image.Point {
+func UIToPoints(i []uint) []image.Point {
 	p := make([]image.Point, len(i))
 	if !(2 < len(i) && len(i)%2 == 0) {
 		fmt.Println("failed to convert []uint to []image.Point")
@@ -61,7 +61,7 @@ func UiToPoints(i []uint) []image.Point {
 	return p
 }
 
-func UiArrToPoints(i [][]uint) []image.Point {
+func UIArrToPoints(i [][]uint) []image.Point {
 	p := make([]image.Point, len(i))
 	for j := 0; j < len(i); j++ {
 		if len(i[j]) != 2 {

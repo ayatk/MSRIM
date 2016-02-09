@@ -14,28 +14,29 @@ type Number struct {
 	Numbers [][]int `json:"numbers"`
 }
 
-var numberJson Number
+var numberJSON Number
 var number [][]image.Point
 var numberImg image.Image
 
-func loadJson() {
+func loadJSON() {
 	file, err := ioutil.ReadFile("assets/number/number.json")
 	if err != nil {
 		fmt.Println("Number json read error: ", err)
 	}
-	json.Unmarshal(file, &numberJson)
-	for _, n := range numberJson.Numbers {
+	json.Unmarshal(file, &numberJSON)
+	for _, n := range numberJSON.Numbers {
 		number = append(number, []image.Point{image.Pt(n[0], n[1]), image.Pt(n[2], n[3])})
 	}
 	return
 }
+
 func loadImg() {
 	numberImg = load.Load("assets/number/ascii.png")
 }
 
 func InitNumber() {
 	loadImg()
-	loadJson()
+	loadJSON()
 	return
 }
 
