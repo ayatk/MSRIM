@@ -7,8 +7,6 @@ import (
 	"path"
 )
 
-const version = "0.4.0-dev"
-
 // Minecraftのjarファイルとレシピのファイル名
 var jar, cfg string
 
