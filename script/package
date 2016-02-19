@@ -20,7 +20,10 @@ for PLATFORM in $(find ./pkg -mindepth 1 -maxdepth 1 -type d); do
   fi
 
   pushd ${PLATFORM}
+  mkdir assets
+  cp -r ${DIR}/config config
   zip ${DIR}/pkg/dist/${VERSION}/${ARCHIVE_NAME}.zip ./*
+  rm -rf assets config
   popd
 done
 
