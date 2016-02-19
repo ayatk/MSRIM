@@ -32,6 +32,14 @@ func main() {
 	// jarを解凍してtmpディレクトリに展開
 	UnJar(jar, "tmp")
 
+	// 出力先のディレクトリ、なければ作る
+	out := "output"
+	if !Exists(out) {
+		if err := os.Mkdir(out, 0777); err != nil {
+			log.Fatal(err)
+		}
+	}
+
 	// 使い終わったtmpディレクトリを削除
 	if err := os.RemoveAll("tmp"); err != nil {
 		log.Fatal(err)
