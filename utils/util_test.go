@@ -1,4 +1,4 @@
-package main
+package utils
 
 import "testing"
 
@@ -8,12 +8,12 @@ type existsTest struct {
 }
 
 var existsTests = []existsTest{
-	{"main.go", true},
-	{"images/image.go", true},
-	{"test_assets/test.jar", true},
-	{"unknown-dir", false},
-	{"unknown-file.txt", false},
-	{"unknown-dir/unknown-file.txt", false},
+	{"../main.go", true},
+	{"../script/compile", true},
+	{"../test_assets/test.jar", true},
+	{"../unknown-dir", false},
+	{"../unknown-file.txt", false},
+	{"../unknown-dir/unknown-file.txt", false},
 }
 
 func TestExists(t *testing.T) {
