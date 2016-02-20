@@ -5,6 +5,9 @@ import (
 	"log"
 	"os"
 	"path"
+
+	"github.com/ayatk/MinecraftRecipeMaker/archive"
+	"github.com/ayatk/MinecraftRecipeMaker/utils"
 )
 
 // Minecraftのjarファイルとレシピのファイル名
@@ -28,11 +31,11 @@ func main() {
 	}
 
 	// jarを解凍してtmpディレクトリに展開
-	UnJar(jar, "tmp")
+	archive.UnJar(jar, "tmp")
 
 	// 出力先のディレクトリ、なければ作る
 	out := "output"
-	if !Exists(out) {
+	if !utils.Exists(out) {
 		if err := os.Mkdir(out, 0777); err != nil {
 			log.Fatal(err)
 		}
