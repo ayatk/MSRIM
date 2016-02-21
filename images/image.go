@@ -19,6 +19,7 @@ func Decode(fp string) (image.Image, error) {
 
 // image.Image型を指定された先にpng形式で書き出し
 // ファイル名がかぶっていた時はエラーを返す
+//
 // NOTE: 今後jpegやgifに対応させるかも
 func Encode(fp string, i image.Image) error {
 	f, err := os.Create(fp)
