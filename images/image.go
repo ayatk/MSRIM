@@ -29,3 +29,19 @@ func Encode(fp string, i image.Image) error {
 	return png.Encode(f, i)
 }
 
+// (x0, y0)から(x1, y1)まで切り取り
+func Crop(i *image.Image, x0, y0, x1, y1 int) image.Image {
+	img := image.NewNRGBA(image.Rect(0, 0, x1-x0, y1-y0))
+	size := (*img).Bounds().Size()
+	for x := 0; x < size.X; x++ {
+		for y := 0; y < size.Y; y++ {
+			(*img).Set(x, y, (*i).At(x1+x, y1+y))
+		}
+	}
+	return img
+}
+
+// Cropの座標指定をintのかわりにimage.Pointを用いる
+func CropPoint(i *image.Image, p []image.Point) image.Image {
+	return Crop(i, p[0].X, p[0].Y, p[1].X, p[1].Y)
+}
