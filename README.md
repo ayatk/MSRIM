@@ -43,7 +43,7 @@ MODのテクスチャを使う場合は[こちら]()
       slot = 1
       image = "gold_nugget"
       # アイテム数を指定します
-      # アイテムが1個の場合は省略できます
+      # 0以外の正の整数を指定してください
       num = 5
 
     # shapeで指定した数だけ画像を入力してください
@@ -51,6 +51,7 @@ MODのテクスチャを使う場合は[こちら]()
       slot = 2
       # block/dartのように書くとブロック形式に変形して描画されます
       image = "block/dirt"
+      num = 1
 
     [[recipes.recipe.images]]
       slot = 3
