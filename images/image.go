@@ -42,7 +42,7 @@ func Crop(i *image.Image, x0, y0, x1, y1 int) image.Image {
 	return img
 }
 
-// Cropの座標指定をintのかわりにimage.Pointを用いる
-func CropPoint(i *image.Image, p []image.Point) image.Image {
-	return Crop(i, p[0].X, p[0].Y, p[1].X, p[1].Y)
+// Cropの座標指定をintのかわりにimage.Rectangleを用いる
+func CropRect(i *image.Image, r image.Rectangle) image.Image {
+	return Crop(i, r.Min.X, r.Min.Y, r.Max.X, r.Max.Y)
 }
