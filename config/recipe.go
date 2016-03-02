@@ -28,12 +28,12 @@ type Img struct {
 }
 
 // レシピが記述されたtomlを読み込んでRecipeConfigに変換
-func LoadRecipe(fp string) (*RecipeConfig, error) {
+func LoadRecipe(fp string) RecipeConfig {
 	var conf RecipeConfig
 
 	_, err := toml.DecodeFile(fp, &conf)
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
-	return &conf, nil
+	return conf
 }
