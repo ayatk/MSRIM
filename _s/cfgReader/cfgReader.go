@@ -6,7 +6,7 @@ import (
 	"image"
 	"io/ioutil"
 
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
+	"github.com/ayatk/MinecraftRecipeMaker/s/util"
 )
 
 type Config2 struct {
@@ -30,7 +30,7 @@ type Config struct {
 func parse(cfg2 Config2) Config {
 	cfg := Config{
 		Gui:      cfg2.Gui,
-		Trim:     util.UiToPoints(cfg2.Trim),
+		Trim:     util.UIToPoints(cfg2.Trim),
 		Place:    util.IArrToPoints(cfg2.Place),
 		Override: cfg2.Override,
 	}

@@ -6,11 +6,11 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/cfgReader"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/edit"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/load"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/output"
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/recipeReader"
+	"github.com/ayatk/MinecraftRecipeMaker/s/cfgReader"
+	"github.com/ayatk/MinecraftRecipeMaker/s/img/edit"
+	"github.com/ayatk/MinecraftRecipeMaker/s/img/load"
+	"github.com/ayatk/MinecraftRecipeMaker/s/img/output"
+	"github.com/ayatk/MinecraftRecipeMaker/s/recipeReader"
 )
 
 const version = "0.3.0"

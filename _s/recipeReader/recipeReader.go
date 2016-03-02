@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"path"
 
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/util"
+	"github.com/ayatk/MinecraftRecipeMaker/s/util"
 )
 
 type RecipeMain struct {

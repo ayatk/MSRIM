@@ -63,6 +63,7 @@ func Output(filePath string, img *image.Image) {
 		}
 		return
 	}
+
 	if file, err = os.Create(filePath); err != nil {
 		fmt.Println("Output create error: ", err)
 		return

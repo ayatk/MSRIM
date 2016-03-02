@@ -5,7 +5,7 @@ import (
 )
 
 // imgを0,0-x,yにリサイズする
-func Resize(img *image.Image, x int, y int) image.Image {
+func Resize(img *image.Image, x, y int) image.Image {
 	img2 := image.NewNRGBA(image.Rect(0, 0, x, y))
 	size := (*img).Bounds().Size()
 	size2 := (*img2).Bounds().Size()

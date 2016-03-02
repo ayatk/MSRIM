@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"strconv"
 
-	"github.com/S--Minecraft/MinecraftSourceRecipeImageMaker/s/img/load"
+	"github.com/ayatk/MinecraftRecipeMaker/s/img/load"
 )
 
 type Number struct {
