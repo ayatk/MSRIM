@@ -1,0 +1,19 @@
+# crafting Table template
+type = "crafting_table"
+image = "crafting_table.png"
+crop = [
+  [7, 6],
+  [168, 79]
+]
+slot = [
+  [30, 17],
+  [48, 17],
+  [66, 17],
+  [30, 35],
+  [48, 35],
+  [66, 35],
+  [30, 53],
+  [48, 53],
+  [66, 53],
+  [124, 35]
+]

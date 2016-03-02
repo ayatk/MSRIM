@@ -1,0 +1,24 @@
+# Furnace template
+type = "furnace"
+image = "furnace.png"
+crop = [
+  [7, 6],
+  [168, 79]
+]
+slot = [
+  [56, 53],
+  [56, 17],
+  [116, 35]
+]
+[[progress]]
+  crop = [
+    [176, 0],
+    [189, 13]
+  ]
+  paste = [57, 36]
+[[progress]]
+  crop = [
+    [176, 14],
+    [24, 17]
+  ]
+  paste = [199, 30]

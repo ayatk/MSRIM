@@ -1,0 +1,23 @@
+# Brewing stand template
+type = "brewing_stand"
+image = "brewing_stand.png"
+crop = [
+  [7, 6],
+  [168, 79]
+]
+slot = [
+  [79, 17],
+  [79, 53]
+]
+[[progress]]
+  crop = [
+    [176, 0],
+    [184, 27]
+  ]
+  paste = [97, 15]
+[[progress]]
+  crop = [
+    [185, 0],
+    [196, 28]
+  ]
+  paste = [65, 13]
