@@ -11,6 +11,6 @@ before_install:
   - go get github.com/axw/gocov/gocov
   - go get github.com/mattn/goveralls
 script:
-  - sh script/coverage --coveralls
+  - sh scripts/coverage --coveralls
 notifications:
   email: false
