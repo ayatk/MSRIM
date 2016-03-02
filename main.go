@@ -1,12 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
 	"path"
 
 	"github.com/ayatk/MinecraftRecipeMaker/archive"
+	"github.com/ayatk/MinecraftRecipeMaker/config"
 	"github.com/ayatk/MinecraftRecipeMaker/utils"
 )
 
@@ -23,15 +25,22 @@ func main() {
 		switch path.Ext(file.Name()) {
 		case ".jar":
 			jar = file.Name()
+		case ".toml":
+			cfg = file.Name()
 		}
 	}
-	// jarとjsonがない場合の処理
+	// jarとレシピファイルがない場合の処理
 	if jar == "" {
 		log.Fatal("Not Found: minecraft jar file")
 	}
+	if cfg == "" {
+		log.Fatal("Not Found: Recipe file")
+	}
 
+	// レシピ読み込み
+	recipe := config.LoadRecipe(cfg)
 	// jarを解凍してtmpディレクトリに展開
-	archive.UnJar(jar, "tmp")
+	archive.UnJar(jar, "tmp/"+jar)
 
 	// 出力先のディレクトリ、なければ作る
 	out := "output"
@@ -40,6 +49,8 @@ func main() {
 			log.Fatal(err)
 		}
 	}
+
+	fmt.Println(recipe)
 
 	// 使い終わったtmpディレクトリを削除
 	if err := os.RemoveAll("tmp"); err != nil {
