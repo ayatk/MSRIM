@@ -1,0 +1,16 @@
+language: go
+sudo: false
+go:
+  - tip
+  - 1.5
+  - 1.4
+env:
+  global:
+    secure: "ORQeWl1rqDfHk831SIjQ4Nsoap+o6cWB8C83ECg4O/ILtyBZA+ZekFytyGm9jk63hQgAizGTK9wN7dj2vfLMkh3Vrq905Mvl6HSv0yuDieEXbDf8PJq+qcYpzqJ1kBYO6Wk2YKKZFS9sXklzDAeAH7CE79PBjsxnidWQH2RS7poNfSlqg1DWMGAaieESFv39Tlr0MHBRuLzkNmegkAEZmcmOOEB2vXmVfN4ox2qFEBHQB0dg6aU+pV4J+dhe3rrPP2dZxmWduze/bpJa/BkUPcOy8V2cm4/am0gnUYPvZnL+uqr1Vil7PL4DWanBs/VWFaj5CJ+9XCtXbzeoAoZQY1qfmBoIXH+U2nCK2w7vbtgMJaxGDaJIpqsofg/q2Map6sVOWapYUairBdkxuUUML73mqtrnH3n+widflcpyYu6KbISchYlDSYuPQaNiUJKTo2QBB0NiIfwoNvAH+FpyIkpZ8c2G+lCk0f/2jKEzCFbtKZZ+aZayJXQzUmgk+BwJSXwjudqik9FizycfWhtYKKc48/xnYWHsXJdISh1EM13ac++BiHuW45H0bCxpe1nx/d383+n8N6F/xV4UwHRqLMKshCddINCBZVtnNeCGHlXn1kQAtH9+k9zALMfFQkz1g7CHPbK3N3bpwPULAG6Pwn9lF0HEfu2obQoUfDKsJK4="
+before_install:
+  - go get github.com/axw/gocov/gocov
+  - go get github.com/mattn/goveralls
+script:
+  - coverage --coveralls
+notifications:
+  email: false
