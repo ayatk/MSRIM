@@ -2,6 +2,7 @@ package config
 
 import (
 	"image"
+	"log"
 
 	"github.com/BurntSushi/toml"
 )
@@ -41,11 +42,11 @@ type Progress struct {
 	Paste image.Point
 }
 
-func LoadConfig(fp string) (*Config, error) {
+func LoadConfig(fp string) Config {
 	var tml TomlConfig
 	_, err := toml.DecodeFile(fp, &tml)
 	if err != nil {
-		return nil, err
+		log.Fatal("load toml: can't convert toml")
 	}
 
 	var slot []image.Point
@@ -72,7 +73,7 @@ func LoadConfig(fp string) (*Config, error) {
 		Progress: prgs,
 	}
 
-	return &conf, nil
+	return conf
 }
 
 // Int型配列からimage.Point型に変換
