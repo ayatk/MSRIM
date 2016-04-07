@@ -13,7 +13,7 @@ type existsTest struct {
 func TestExists(t *testing.T) {
 	var existsTests = []existsTest{
 		{"../main.go", true},
-		{"../script/compile", true},
+		{"../scripts/compile", true},
 		{"../test_assets/test.jar", true},
 		{"../unknown-dir", false},
 		{"../unknown-file.txt", false},
